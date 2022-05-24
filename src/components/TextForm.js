@@ -52,16 +52,16 @@ export default function TextForm(props) {
                     <h4>{props.heading}</h4>
                     <textarea className="form-control" value={text} onChange={onChangeEvent} id="exampleFormControlTextarea1" rows="8"></textarea>
                 </div>
-                <button className="btn btn-primary" onClick={clickHandle}>Text Uppercase</button>
-                <button className="btn btn-primary ms-2" onClick={clickClearHandle}>Clear</button>
-                <button className="btn btn-primary ms-2" onClick={clickModeHandle}>{btntext}</button>
-                <button className="btn btn-primary ms-2" onClick={clickCopyHandle}>Copy text</button>
-                <button className="btn btn-primary ms-2" onClick={clickExtraSpaceHandle}>Remove Extra Space</button>
+                <button disabled={text.length==0} className="btn btn-primary" onClick={clickHandle}>Text Uppercase</button>
+                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickClearHandle}>Clear</button>
+                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickModeHandle}>{btntext}</button>
+                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickCopyHandle}>Copy text</button>
+                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickExtraSpaceHandle}>Remove Extra Space</button>
 
             </div>
             <div className="pt-4 p-3" style={myStyle}>
                 <h4>Text sumary</h4>
-                <p>{text.split(" ").length - 1} Words {text.length} Characters</p>
+                <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words {text.length} Characters</p>
                 <p><strong>{0.008 * text.length} Mins to read the text</strong></p>
             </div>
         </>
