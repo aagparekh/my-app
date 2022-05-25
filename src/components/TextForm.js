@@ -39,7 +39,7 @@ export default function TextForm(props) {
         navigator.clipboard.writeText(text);
         alert("Text copied to clipboard");
     }
-    const [text, setText] = useState('Text here to change djfscmss');
+    const [text, setText] = useState('Text here to change djfscmss uggh8yiu8vt');
     const [myStyle,setMyStyle] = useState({
         color:'black',
         backgroundColor:'white' 
@@ -52,11 +52,11 @@ export default function TextForm(props) {
                     <h4>{props.heading}</h4>
                     <textarea className="form-control" value={text} onChange={onChangeEvent} id="exampleFormControlTextarea1" rows="8"></textarea>
                 </div>
-                <button disabled={text.length==0} className="btn btn-primary" onClick={clickHandle}>Text Uppercase</button>
-                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickClearHandle}>Clear</button>
-                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickModeHandle}>{btntext}</button>
-                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickCopyHandle}>Copy text</button>
-                <button disabled={text.length==0} className="btn btn-primary ms-2" onClick={clickExtraSpaceHandle}>Remove Extra Space</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={clickHandle}>Text Uppercase</button>
+                <button disabled={text.length===0} className="btn btn-primary ms-2" onClick={clickClearHandle}>Clear</button>
+                <button disabled={text.length===0} className="btn btn-primary ms-2" onClick={clickModeHandle}>{btntext}</button>
+                <button disabled={text.length===0} className="btn btn-primary ms-2" onClick={clickCopyHandle}>Copy text</button>
+                <button disabled={text.length===0} className="btn btn-primary ms-2" onClick={clickExtraSpaceHandle}>Remove Extra Space</button>
 
             </div>
             <div className="pt-4 p-3" style={myStyle}>
