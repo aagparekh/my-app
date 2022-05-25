@@ -39,7 +39,7 @@ export default function TextForm(props) {
         navigator.clipboard.writeText(text);
         alert("Text copied to clipboard");
     }
-    const [text, setText] = useState('Text here to change');
+    const [text, setText] = useState('Text here to change djfscmss');
     const [myStyle,setMyStyle] = useState({
         color:'black',
         backgroundColor:'white' 
